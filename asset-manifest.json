@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/acftcalc/static/css/main.9d5b29c0.chunk.css",
+    "main.js": "/acftcalc/static/js/main.37d5ca2b.chunk.js",
+    "main.js.map": "/acftcalc/static/js/main.37d5ca2b.chunk.js.map",
+    "runtime-main.js": "/acftcalc/static/js/runtime-main.1be710b0.js",
+    "runtime-main.js.map": "/acftcalc/static/js/runtime-main.1be710b0.js.map",
+    "static/js/2.ea5b6659.chunk.js": "/acftcalc/static/js/2.ea5b6659.chunk.js",
+    "static/js/2.ea5b6659.chunk.js.map": "/acftcalc/static/js/2.ea5b6659.chunk.js.map",
+    "static/js/3.93587e65.chunk.js": "/acftcalc/static/js/3.93587e65.chunk.js",
+    "static/js/3.93587e65.chunk.js.map": "/acftcalc/static/js/3.93587e65.chunk.js.map",
+    "index.html": "/acftcalc/index.html",
+    "static/css/main.9d5b29c0.chunk.css.map": "/acftcalc/static/css/main.9d5b29c0.chunk.css.map",
+    "static/js/2.ea5b6659.chunk.js.LICENSE.txt": "/acftcalc/static/js/2.ea5b6659.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/acftcalc/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1be710b0.js",
+    "static/js/2.ea5b6659.chunk.js",
+    "static/css/main.9d5b29c0.chunk.css",
+    "static/js/main.37d5ca2b.chunk.js"
+  ]
+}

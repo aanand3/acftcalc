@@ -1,26 +1,28 @@
 {
   "files": {
-    "main.css": "/acftcalc/static/css/main.10fc39a3.chunk.css",
-    "main.js": "/acftcalc/static/js/main.6de061f4.chunk.js",
-    "main.js.map": "/acftcalc/static/js/main.6de061f4.chunk.js.map",
-    "runtime-main.js": "/acftcalc/static/js/runtime-main.59867bc6.js",
-    "runtime-main.js.map": "/acftcalc/static/js/runtime-main.59867bc6.js.map",
-    "static/js/2.3aa12444.chunk.js": "/acftcalc/static/js/2.3aa12444.chunk.js",
-    "static/js/2.3aa12444.chunk.js.map": "/acftcalc/static/js/2.3aa12444.chunk.js.map",
-    "static/js/3.e5a71bf9.chunk.js": "/acftcalc/static/js/3.e5a71bf9.chunk.js",
-    "static/js/3.e5a71bf9.chunk.js.map": "/acftcalc/static/js/3.e5a71bf9.chunk.js.map",
+    "main.css": "/acftcalc/static/css/main.0ff95e18.chunk.css",
+    "main.js": "/acftcalc/static/js/main.f635eaa3.chunk.js",
+    "main.js.map": "/acftcalc/static/js/main.f635eaa3.chunk.js.map",
+    "runtime-main.js": "/acftcalc/static/js/runtime-main.39f7da8f.js",
+    "runtime-main.js.map": "/acftcalc/static/js/runtime-main.39f7da8f.js.map",
+    "static/js/2.634d02da.chunk.js": "/acftcalc/static/js/2.634d02da.chunk.js",
+    "static/js/2.634d02da.chunk.js.map": "/acftcalc/static/js/2.634d02da.chunk.js.map",
+    "static/js/3.e4ca4a1f.chunk.js": "/acftcalc/static/js/3.e4ca4a1f.chunk.js",
+    "static/js/3.e4ca4a1f.chunk.js.map": "/acftcalc/static/js/3.e4ca4a1f.chunk.js.map",
     "index.html": "/acftcalc/index.html",
-    "static/css/main.10fc39a3.chunk.css.map": "/acftcalc/static/css/main.10fc39a3.chunk.css.map",
-    "static/js/2.3aa12444.chunk.js.LICENSE.txt": "/acftcalc/static/js/2.3aa12444.chunk.js.LICENSE.txt",
+    "static/css/main.0ff95e18.chunk.css.map": "/acftcalc/static/css/main.0ff95e18.chunk.css.map",
+    "static/js/2.634d02da.chunk.js.LICENSE.txt": "/acftcalc/static/js/2.634d02da.chunk.js.LICENSE.txt",
+    "static/media/2MRData.d6e9e5a3.txt": "/acftcalc/static/media/2MRData.d6e9e5a3.txt",
     "static/media/HRPData.1cc15ff8.txt": "/acftcalc/static/media/HRPData.1cc15ff8.txt",
+    "static/media/LTKData.4edc95b8.txt": "/acftcalc/static/media/LTKData.4edc95b8.txt",
     "static/media/MDLData.d0297944.txt": "/acftcalc/static/media/MDLData.d0297944.txt",
-    "static/media/SDCData.ef8cff09.txt": "/acftcalc/static/media/SDCData.ef8cff09.txt",
+    "static/media/SDCData.51abafe9.txt": "/acftcalc/static/media/SDCData.51abafe9.txt",
     "static/media/SPTData.f716e833.txt": "/acftcalc/static/media/SPTData.f716e833.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.59867bc6.js",
-    "static/js/2.3aa12444.chunk.js",
-    "static/css/main.10fc39a3.chunk.css",
-    "static/js/main.6de061f4.chunk.js"
+    "static/js/runtime-main.39f7da8f.js",
+    "static/js/2.634d02da.chunk.js",
+    "static/css/main.0ff95e18.chunk.css",
+    "static/js/main.f635eaa3.chunk.js"
   ]
 }

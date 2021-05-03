@@ -113,7 +113,7 @@ export default function EventSlider(props)
     }
 
     return (
-        <Box className={classes.root}>
+        <Box className={classes.root} m={5}>
             <Typography variant="h4" id="input-slider" gutterBottom>
                 {props.eventName}
             </Typography>

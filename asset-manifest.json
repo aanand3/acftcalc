@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/acftcalc/static/css/main.0ff95e18.chunk.css",
-    "main.js": "/acftcalc/static/js/main.f635eaa3.chunk.js",
-    "main.js.map": "/acftcalc/static/js/main.f635eaa3.chunk.js.map",
+    "main.css": "/acftcalc/static/css/main.10c6fc35.chunk.css",
+    "main.js": "/acftcalc/static/js/main.09e9359e.chunk.js",
+    "main.js.map": "/acftcalc/static/js/main.09e9359e.chunk.js.map",
     "runtime-main.js": "/acftcalc/static/js/runtime-main.39f7da8f.js",
     "runtime-main.js.map": "/acftcalc/static/js/runtime-main.39f7da8f.js.map",
     "static/js/2.634d02da.chunk.js": "/acftcalc/static/js/2.634d02da.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.e4ca4a1f.chunk.js": "/acftcalc/static/js/3.e4ca4a1f.chunk.js",
     "static/js/3.e4ca4a1f.chunk.js.map": "/acftcalc/static/js/3.e4ca4a1f.chunk.js.map",
     "index.html": "/acftcalc/index.html",
-    "static/css/main.0ff95e18.chunk.css.map": "/acftcalc/static/css/main.0ff95e18.chunk.css.map",
+    "static/css/main.10c6fc35.chunk.css.map": "/acftcalc/static/css/main.10c6fc35.chunk.css.map",
     "static/js/2.634d02da.chunk.js.LICENSE.txt": "/acftcalc/static/js/2.634d02da.chunk.js.LICENSE.txt",
     "static/media/2MRData.d6e9e5a3.txt": "/acftcalc/static/media/2MRData.d6e9e5a3.txt",
     "static/media/HRPData.1cc15ff8.txt": "/acftcalc/static/media/HRPData.1cc15ff8.txt",
@@ -22,7 +22,7 @@
   "entrypoints": [
     "static/js/runtime-main.39f7da8f.js",
     "static/js/2.634d02da.chunk.js",
-    "static/css/main.0ff95e18.chunk.css",
-    "static/js/main.f635eaa3.chunk.js"
+    "static/css/main.10c6fc35.chunk.css",
+    "static/js/main.09e9359e.chunk.js"
   ]
 }

@@ -13,7 +13,6 @@ function App()
 {
   return (
     <div className="App">
-      <header className="App-header">
         <EventSlider
           eventName="Deadlift"
           min={130}
@@ -56,8 +55,6 @@ function App()
           step={1}
           fileName={TMRFile}
         />
-      </header>
-
     </div>
   );
 }

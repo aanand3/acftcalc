@@ -113,11 +113,11 @@ export default function EventSlider(props)
     }
 
     return (
-        <Box className={classes.root} width="50%">
+        <Box className={classes.root}>
             <Typography variant="h4" id="input-slider" gutterBottom>
                 {props.eventName}
             </Typography>
-            <Grid container spacing={2} alignItems="center">
+            <Grid container spacing={2} alignItems="center" lg={10}>
                 <Grid item xs>
                     <ACFTSlider
                         value={typeof value === 'number' ? value : 0}

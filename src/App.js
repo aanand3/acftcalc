@@ -3,6 +3,7 @@ import EventSlider from './Components/EventSlider';
 import MDLFile from './Reference/MDLData.txt';
 import SPTFile from './Reference/SPTData.txt';
 import HRPFile from './Reference/HRPData.txt';
+import SDCFile from './Reference/SDCData.txt'
 import TimeSlider from './Components/TimeSlider';
 
 
@@ -37,7 +38,7 @@ function App()
           min={93}
           max={215}
           step={1}
-          fileName={HRPFile}
+          fileName={SDCFile}
         />
       </header>
 

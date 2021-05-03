@@ -28,13 +28,10 @@ export default function TimeSlider(props)
     // value starts at the min
     const [value, setValue] = React.useState(props.min);
     const [score, setScore] = React.useState(0);
-    const [minuteValue, setMinuteValue] = React.useState(props.minuteMin)
-    const [secondValue, setSecondValue] = React.useState(props.secondMin)
 
     // same as component did mount for obj compo's 
     useEffect(() =>
     {
-        setMinutesAndSeconds();
         grabScoreFromFile();
     });
 
@@ -42,35 +39,43 @@ export default function TimeSlider(props)
     const handleTimeSliderChange = async (event, newValue) =>
     {
         setValue(newValue);
-        // setMinutesAndSeconds();
     };
 
-    const setMinutesAndSeconds = () =>
-    {
-        var minutes = Math.floor(value / 60);
-        var seconds = value - minutes * 60;
-        setMinuteValue(minutes)
-        setSecondValue(seconds)
-    };
-
-    // const convertToTime = (rawValue) =>
-    // {
-    //     var seconds = rawValue%60;
-    //     rawValue /= 60;
-    //     setValue(rawValue + seconds)
-    // };
+    var minutes = Math.floor(value / 60);
+    var seconds = (value - minutes * 60).toLocaleString('en-US', {
+        minimumIntegerDigits: 2,
+        useGrouping: false
+      });
 
     // for the text field
     const handleMinuteChange = async (event) =>
     {
-        setMinuteValue(event.target.value === '' ? '' : Number(event.target.value));
-        setValue(minuteValue * 60 + secondValue);
+        let newMinutes = 0;
+        newMinutes = parseInt(event.target.value)
+        console.log(newMinutes, seconds)
+
+        let newTotal = newMinutes * 60 + seconds
+
+        if(newTotal >= 0){
+            setValue(newTotal)
+        } else {setValue(seconds)}
+
     };
 
     const handleSecondChange = async (event) =>
     {
-        setSecondValue(event.target.value === '' ? '' : Number(event.target.value));
-        setValue(minuteValue * 60 + secondValue)
+        let newSeconds = 0;
+        newSeconds = parseInt(event.target.value)
+
+        seconds = parseInt(event.target.value)
+        console.log(minutes, newSeconds)
+
+        let newTotal = minutes * 60 + newSeconds;
+
+        if (newTotal >= 0)
+        {
+            setValue(newTotal)
+        } else { setValue(minutes * 60) }
     };
     // handleBlur called when component goes out of focus
     // const handleBlur = async() =>
@@ -91,7 +96,6 @@ export default function TimeSlider(props)
         const text = await fileContent.text();
         console.log('value is ', value)
         var lines = text.split("\n");
-        console.log(lines);
 
         var score = findScore(lines);
         console.log('score is ', score)
@@ -103,17 +107,19 @@ export default function TimeSlider(props)
     {
         if (value <= props.min)
         {
-            return 0;
+            return 100;
         } else if (value >= props.max)
         {
-            return 100;
+            return 0;
         }
 
+        // needs to go from (lowerNum, higherNum] and then return the score of the higher
         for (let i = 0; i < lines.length - 1; i++)
         {
-            if (value >= Number(lines[i].split(' ')[0]) && value < Number(lines[i + 1].split(' ')[0]))
+            if (value > Number(lines[i].split(' ')[0]) 
+                && value <= Number(lines[i + 1].split(' ')[0]))
             {
-                return lines[i].split(' ')[1];
+                return lines[i+1].split(' ')[1];
             }
         }
     }
@@ -149,32 +155,32 @@ export default function TimeSlider(props)
                 <Grid item>
                     <Input
                         className={classes.input}
-                        value={minuteValue}
+                        value={minutes.toString()}
                         margin="dense"
                         onChange={handleMinuteChange}
 
                         inputProps={{
                             step: props.step,
-                            min: '0',
-                            max: '4',
+                            min: 0,
+                            max: 4,
                             type: 'number',
                             'aria-labelledby': 'input-slider',
                         }}
-                    />
+                    /> 
                     <Input
                         className={classes.input}
-                        value={secondValue}
+                        value={seconds.toString()}
                         margin="dense"
                         onChange={handleSecondChange}
 
                         inputProps={{
                             step: props.step,
-                            min: '00',
-                            max: '59',
+                            min: 0,
+                            max: 59,
                             type: 'number',
                             'aria-labelledby': 'input-slider',
                         }}
-                    />                
+                    />
                 </Grid>
                 <Grid item>
                     <Typography> {score} </Typography>

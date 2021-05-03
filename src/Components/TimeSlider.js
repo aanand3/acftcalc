@@ -4,15 +4,14 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Slider from '@material-ui/core/Slider';
 import Input from '@material-ui/core/Input';
-import TextField from '@material-ui/core/TextField'
 import { withStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
-import NumberFormat from 'react-number-format';
+import { Box, Paper } from '@material-ui/core';
+
 
 // style for the slider
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) =>({
     root: {
-        width: 500,
         color: "white",
 
     },
@@ -20,7 +19,18 @@ const useStyles = makeStyles({
         width: 42,
         color: 'white',
     },
-});
+    paper: {
+        display: 'flex',
+        flexWrap: 'wrap',
+        '& > *': {
+          margin: theme.spacing(1),
+          width: theme.spacing(4),
+          height: theme.spacing(2),
+        },
+        background: '#936e11ec',
+        color: "white",
+      },
+}));
 
 export default function TimeSlider(props)
 {
@@ -96,6 +106,7 @@ export default function TimeSlider(props)
         const text = await fileContent.text();
         console.log('value is ', value)
         var lines = text.split("\n");
+        console.log(lines)
 
         var score = findScore(lines);
         console.log('score is ', score)
@@ -116,6 +127,7 @@ export default function TimeSlider(props)
         // needs to go from (lowerNum, higherNum] and then return the score of the higher
         for (let i = 0; i < lines.length - 1; i++)
         {
+            console.log('comparing: ', value, Number(lines[i].split(' ')[0]), Number(lines[i + 1].split(' ')[0]))
             if (value > Number(lines[i].split(' ')[0]) 
                 && value <= Number(lines[i + 1].split(' ')[0]))
             {
@@ -135,8 +147,8 @@ export default function TimeSlider(props)
     }
 
     return (
-        <div className={classes.root}>
-            <Typography id="input-slider" gutterBottom>
+        <Box className={classes.root} width = "50%">
+            <Typography variant="h4" id="input-slider" gutterBottom>
                 {props.eventName}
             </Typography>
             <Grid container spacing={2} alignItems="center">
@@ -152,7 +164,7 @@ export default function TimeSlider(props)
                         min={props.min}
                         max={props.max} />
                 </Grid>
-                <Grid item>
+                <Grid item xs={2}>
                     <Input
                         className={classes.input}
                         value={minutes.toString()}
@@ -182,11 +194,11 @@ export default function TimeSlider(props)
                         }}
                     />
                 </Grid>
-                <Grid item>
+                <Paper className={classes.paper} item xs={1}>
                     <Typography> {score} </Typography>
-                </Grid>
+                </Paper>
             </Grid>
-        </div>
+        </Box>
     );
 }
 

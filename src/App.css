@@ -28,6 +28,12 @@
   color: #61dafb;
 }
 
+#input-slider {
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: left !important;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

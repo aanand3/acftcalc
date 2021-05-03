@@ -7,11 +7,11 @@ import Input from '@material-ui/core/Input';
 import { withStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
 import moment from 'moment'
+import { Box, Paper } from '@material-ui/core';
 
 // style for the slider
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) =>({
     root: {
-        width: 500,
         color: "white",
 
     },
@@ -19,7 +19,18 @@ const useStyles = makeStyles({
         width: 42,
         color: 'white',
     },
-});
+    paper: {
+        display: 'flex',
+        flexWrap: 'wrap',
+        '& > *': {
+          margin: theme.spacing(1),
+          width: theme.spacing(4),
+          height: theme.spacing(2),
+        },
+        background: '#936e11ec',
+        color: "white",
+      },
+}))
 
 export default function EventSlider(props)
 {
@@ -102,8 +113,8 @@ export default function EventSlider(props)
     }
 
     return (
-        <div className={classes.root}>
-            <Typography id="input-slider" gutterBottom>
+        <Box className={classes.root} width="50%">
+            <Typography variant="h4" id="input-slider" gutterBottom>
                 {props.eventName}
             </Typography>
             <Grid container spacing={2} alignItems="center">
@@ -119,7 +130,7 @@ export default function EventSlider(props)
                         min={props.min}
                         max={props.max} />
                 </Grid>
-                <Grid item>
+                <Grid item xs={2}>
                     <Input
                         className={classes.input}
                         value={value}
@@ -135,11 +146,11 @@ export default function EventSlider(props)
                         }}
                     />
                 </Grid>
-                <Grid item>
+                <Paper className={classes.paper} item xs={1}>
                     <Typography> {score} </Typography>
-                </Grid>
+                </Paper>
             </Grid>
-        </div>
+        </Box>
     );
 }
 

@@ -1,35 +1,13 @@
-import React,  { useEffect } from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
+import React, {useEffect} from 'react';
+import {makeStyles, withStyles} from '@material-ui/core/styles';
 import Slider from '@material-ui/core/Slider';
 import Input from '@material-ui/core/Input';
-import { withStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
-import moment from 'moment'
-import { Box, Paper } from '@material-ui/core';
+import './EventSlider.css'
+
 
 // style for the slider
 const useStyles = makeStyles((theme) =>({
-    root: {
-        color: "white",
-
-    },
-    input: {
-        width: 42,
-        color: 'white',
-    },
-    paper: {
-        display: 'flex',
-        flexWrap: 'wrap',
-        '& > *': {
-          margin: theme.spacing(1),
-          width: theme.spacing(4),
-          height: theme.spacing(2),
-        },
-        background: '#936e11ec',
-        color: "white",
-      },
 }))
 
 export default function EventSlider(props)
@@ -113,13 +91,13 @@ export default function EventSlider(props)
     }
 
     return (
-        <Box className={classes.root} m={5}>
-            <Typography variant="h4" id="input-slider" gutterBottom>
+        <div className="event-container">
+            <h4 className="event-title" >
                 {props.eventName}
-            </Typography>
-            <Grid container spacing={2} alignItems="center" lg={10}>
-                <Grid item xs>
+            </h4>
+            <div className="event-slider-container">
                     <ACFTSlider
+                        className="event-slider"
                         value={typeof value === 'number' ? value : 0}
                         onChange={handleSliderChange}
                         aria-labelledby="input-slider"
@@ -129,10 +107,8 @@ export default function EventSlider(props)
                         marks={generateMarks()}
                         min={props.min}
                         max={props.max} />
-                </Grid>
-                <Grid item xs={2}>
                     <Input
-                        className={classes.input}
+                        className="event-input"
                         value={value}
                         margin="dense"
                         onChange={handleInputChange}
@@ -145,12 +121,11 @@ export default function EventSlider(props)
                             'aria-labelledby': 'input-slider',
                         }}
                     />
-                </Grid>
-                <Paper className={classes.paper} item xs={1}>
-                    <Typography> {score} </Typography>
-                </Paper>
-            </Grid>
-        </Box>
+                <h4 className="event-score">
+                     {score}
+                </h4>
+            </div>
+        </div>
     );
 }
 

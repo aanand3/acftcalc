@@ -1,0 +1,33 @@
+.event-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.event-title {
+    width: 100%;
+}
+
+.event-slider-container {
+    display: flex;
+    align-items: center;
+}
+
+.event-slider {
+    width: 50% ;
+    margin: 10px;
+}
+
+.event-input {
+    width: 25%;
+    color: white !important;
+    text-align: center !important;
+}
+
+.MuiInput-input {
+    text-align: center;
+}
+
+.event-score {
+    width: 25%;
+}
+
